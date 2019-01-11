@@ -8,6 +8,7 @@ CGPoint KWLTextOrigin = { 12, 8 };
 @interface KWLCoolView ()
 @property (assign, nonatomic, getter=isHighlighted) BOOL highlighted;
 @property (class, strong, nonatomic, readonly) NSDictionary *textAttributes;
+@property (nonatomic) IBInspectable CGFloat borderWidth;
 @end
 
 @implementation KWLCoolView
@@ -19,6 +20,18 @@ CGPoint KWLTextOrigin = { 12, 8 };
     [self configureGestureRecognizers];
     
     return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (!(self = [super initWithCoder:aDecoder])) return nil;
+    
+    [self configureLayer];
+    
+    return self;
+}
+
+- (void)prepareForInterfaceBuilder {
+    self.layer.masksToBounds = YES;
 }
 
 - (void)configureLayer {
@@ -37,6 +50,13 @@ CGPoint KWLTextOrigin = { 12, 8 };
 + (NSDictionary *)textAttributes {
     return @{ NSFontAttributeName: [UIFont systemFontOfSize:20.0],
               NSForegroundColorAttributeName: UIColor.whiteColor };
+}
+
+- (CGFloat)borderWidth {
+    return self.layer.borderWidth;
+}
+- (void)setBorderWidth:(CGFloat)borderWidth {
+    self.layer.borderWidth = borderWidth;
 }
 
 - (void)setText:(NSString *)text {
@@ -62,7 +82,7 @@ CGPoint KWLTextOrigin = { 12, 8 };
 
 // MARK: - Animation methods
 
-- (void)bounce {
+- (IBAction)bounce {
     NSLog(@"In %s", __func__);
     [self animateBounceWithDuration:1.0 size:CGSizeMake(120, 240)];
 }
