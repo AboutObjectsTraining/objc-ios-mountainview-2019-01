@@ -71,7 +71,13 @@
                             <outlet property="delegate" destination="BhK-0D-PHg" id="T7A-dw-TBU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reading List" id="iT0-V6-eMr"/>
+                    <navigationItem key="navigationItem" title="Reading List" id="iT0-V6-eMr">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1VJ-A5-sfa">
+                            <connections>
+                                <segue destination="Bpj-sL-XA5" kind="presentation" id="NxK-bK-IUL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R19-Xf-NG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,7 +86,7 @@
         <!--Book Detail-->
         <scene sceneID="hOg-wt-MJK">
             <objects>
-                <tableViewController id="Un0-pi-ahB" sceneMemberID="viewController">
+                <tableViewController id="Un0-pi-ahB" customClass="RELBookDetailController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3Lb-FU-9YF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,103 +205,30 @@
                     <navigationItem key="navigationItem" title="Book Detail" id="uby-KR-MCL">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="0iz-tw-D8M">
                             <connections>
-                                <segue destination="YNs-aa-Agj" kind="presentation" id="poH-sN-ZdP"/>
+                                <segue destination="fGb-w8-mUY" kind="presentation" id="poH-sN-ZdP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaH-tw-THh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="-76"/>
+            <point key="canvasLocation" x="457" y="132"/>
         </scene>
-        <!--Edit Book-->
-        <scene sceneID="jcy-1C-F3q">
+        <!--EditBook-->
+        <scene sceneID="AF4-cS-ejC">
             <objects>
-                <tableViewController id="pK3-OV-MbK" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="eIW-3q-DIz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection id="yJR-AM-8u3">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="9Qi-37-0gD">
-                                        <rect key="frame" x="0.0" y="35" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Qi-37-0gD" id="NgC-6p-NLD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The Tempest" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gjd-2P-rqu">
-                                                    <rect key="frame" x="16" y="14" width="343" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="kaw-lR-UAa">
-                                        <rect key="frame" x="0.0" y="95" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kaw-lR-UAa" id="b6a-pZ-X9V">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1999" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m7H-5p-ayf">
-                                                    <rect key="frame" x="16" y="14" width="343" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                </textField>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="pK3-OV-MbK" id="Btf-BC-5Hx"/>
-                            <outlet property="delegate" destination="pK3-OV-MbK" id="ZpL-Ic-CVf"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Edit Book" id="1vM-9u-9F9">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="2eh-tG-q9w">
-                            <connections>
-                                <segue destination="1bs-qj-VMH" kind="unwind" unwindAction="cancel:" id="Dpe-OU-A3j"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ZXz-3R-CXu">
-                            <connections>
-                                <segue destination="1bs-qj-VMH" kind="unwind" unwindAction="done:" id="Lxv-wF-CcC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6HQ-QN-zUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="1bs-qj-VMH" userLabel="Exit" sceneMemberID="exit"/>
+                <viewControllerPlaceholder storyboardName="EditBook" id="fGb-w8-mUY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMN-BL-1yE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="-76"/>
+            <point key="canvasLocation" x="1073" y="132"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="t5R-Yf-7dI">
+        <!--AddBook-->
+        <scene sceneID="EoN-CC-MTE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YNs-aa-Agj" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="eDd-Fe-bpY">
-                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pK3-OV-MbK" kind="relationship" relationship="rootViewController" id="AR4-4B-dZ4"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rPb-kH-2wA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="AddBook" id="Bpj-sL-XA5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70p-Xj-OQa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="-76.108374384236456"/>
+            <point key="canvasLocation" x="225" y="-367"/>
         </scene>
     </scenes>
 </document>
