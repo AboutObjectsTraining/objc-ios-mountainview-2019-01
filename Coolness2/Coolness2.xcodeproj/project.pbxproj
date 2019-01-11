@@ -10,10 +10,12 @@
 		B471386E21E7C44000640A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B471386D21E7C44000640A33 /* Assets.xcassets */; };
 		B471387121E7C44000640A33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B471386F21E7C44000640A33 /* LaunchScreen.storyboard */; };
 		B471387421E7C44000640A33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B471387321E7C44000640A33 /* main.m */; };
-		B471388921E7C65F00640A33 /* KWLCoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B471388321E7C65F00640A33 /* KWLCoolView.m */; };
+		B471388921E7C65F00640A33 /* KWLCoolViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B471388321E7C65F00640A33 /* KWLCoolViewCell.m */; };
 		B471388A21E7C65F00640A33 /* KWLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B471388621E7C65F00640A33 /* KWLAppDelegate.m */; };
 		B471388B21E7C65F00640A33 /* KWLCoolController.m in Sources */ = {isa = PBXBuildFile; fileRef = B471388721E7C65F00640A33 /* KWLCoolController.m */; };
 		B471388D21E7D17200640A33 /* CoolStuff.xib in Resources */ = {isa = PBXBuildFile; fileRef = B471388C21E7D17200640A33 /* CoolStuff.xib */; };
+		B4864F5B21E816E000EB67CE /* KWLCoolView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4864F5A21E816E000EB67CE /* KWLCoolView.m */; };
+		B4864F5E21E81D7F00EB67CE /* KWLAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4864F5D21E81D7F00EB67CE /* KWLAccessoryView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,13 +24,17 @@
 		B471387021E7C44000640A33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B471387221E7C44000640A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B471387321E7C44000640A33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B471388321E7C65F00640A33 /* KWLCoolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLCoolView.m; sourceTree = "<group>"; };
+		B471388321E7C65F00640A33 /* KWLCoolViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLCoolViewCell.m; sourceTree = "<group>"; };
 		B471388421E7C65F00640A33 /* KWLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLAppDelegate.h; sourceTree = "<group>"; };
 		B471388521E7C65F00640A33 /* KWLCoolController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLCoolController.h; sourceTree = "<group>"; };
 		B471388621E7C65F00640A33 /* KWLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLAppDelegate.m; sourceTree = "<group>"; };
 		B471388721E7C65F00640A33 /* KWLCoolController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KWLCoolController.m; sourceTree = "<group>"; };
-		B471388821E7C65F00640A33 /* KWLCoolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLCoolView.h; sourceTree = "<group>"; };
+		B471388821E7C65F00640A33 /* KWLCoolViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KWLCoolViewCell.h; sourceTree = "<group>"; };
 		B471388C21E7D17200640A33 /* CoolStuff.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoolStuff.xib; sourceTree = "<group>"; };
+		B4864F5921E816E000EB67CE /* KWLCoolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLCoolView.h; sourceTree = "<group>"; };
+		B4864F5A21E816E000EB67CE /* KWLCoolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLCoolView.m; sourceTree = "<group>"; };
+		B4864F5C21E81D7F00EB67CE /* KWLAccessoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KWLAccessoryView.h; sourceTree = "<group>"; };
+		B4864F5D21E81D7F00EB67CE /* KWLAccessoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KWLAccessoryView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +71,12 @@
 				B471388621E7C65F00640A33 /* KWLAppDelegate.m */,
 				B471388521E7C65F00640A33 /* KWLCoolController.h */,
 				B471388721E7C65F00640A33 /* KWLCoolController.m */,
-				B471388821E7C65F00640A33 /* KWLCoolView.h */,
-				B471388321E7C65F00640A33 /* KWLCoolView.m */,
+				B4864F5C21E81D7F00EB67CE /* KWLAccessoryView.h */,
+				B4864F5D21E81D7F00EB67CE /* KWLAccessoryView.m */,
+				B4864F5921E816E000EB67CE /* KWLCoolView.h */,
+				B4864F5A21E816E000EB67CE /* KWLCoolView.m */,
+				B471388821E7C65F00640A33 /* KWLCoolViewCell.h */,
+				B471388321E7C65F00640A33 /* KWLCoolViewCell.m */,
 				B471388C21E7D17200640A33 /* CoolStuff.xib */,
 				B471386D21E7C44000640A33 /* Assets.xcassets */,
 				B471386F21E7C44000640A33 /* LaunchScreen.storyboard */,
@@ -146,8 +156,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B471388921E7C65F00640A33 /* KWLCoolView.m in Sources */,
+				B471388921E7C65F00640A33 /* KWLCoolViewCell.m in Sources */,
 				B471388B21E7C65F00640A33 /* KWLCoolController.m in Sources */,
+				B4864F5E21E81D7F00EB67CE /* KWLAccessoryView.m in Sources */,
+				B4864F5B21E816E000EB67CE /* KWLCoolView.m in Sources */,
 				B471387421E7C44000640A33 /* main.m in Sources */,
 				B471388A21E7C65F00640A33 /* KWLAppDelegate.m in Sources */,
 			);

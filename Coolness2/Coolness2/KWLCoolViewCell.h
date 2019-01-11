@@ -3,6 +3,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KWLCoolView : UIView\
+IB_DESIGNABLE
+@interface KWLCoolViewCell : UIView
+
+@property (strong, nonatomic) IBInspectable NSString *text;
 
 @end

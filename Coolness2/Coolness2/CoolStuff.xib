@@ -12,8 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KWLCoolController">
             <connections>
-                <outlet property="contentView" destination="h0g-41-1wJ" id="E64-YI-FCV"/>
-                <outlet property="textField" destination="UBy-LT-g7i" id="e03-R6-9Cu"/>
                 <outlet property="view" destination="yN2-H5-hVi" id="Rbm-b5-J1U"/>
             </connections>
         </placeholder>
@@ -22,7 +20,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-KH-6Gy" userLabel="Accessory View">
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-KH-6Gy" userLabel="Accessory View" customClass="KWLAccessoryView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -31,7 +29,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Add"/>
                             <connections>
-                                <action selector="addCoolView" destination="-1" eventType="touchUpInside" id="I4h-DB-PsX"/>
+                                <action selector="addCoolView" destination="h0g-41-1wJ" eventType="touchUpInside" id="3Rl-ed-HxW"/>
                             </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter some text." textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UBy-LT-g7i">
@@ -41,17 +39,17 @@
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             <connections>
-                                <outlet property="delegate" destination="-1" id="Zvs-j2-RtF"/>
+                                <outlet property="delegate" destination="2iI-KH-6Gy" id="T90-e9-4K9"/>
                             </connections>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0g-41-1wJ" userLabel="Content View">
+                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0g-41-1wJ" userLabel="Content View" customClass="KWLCoolView">
                     <rect key="frame" x="0.0" y="90" width="375" height="722"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5RF-7w-2DX" customClass="KWLCoolView">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5RF-7w-2DX" customClass="KWLCoolViewCell">
                             <rect key="frame" x="29" y="65" width="257" height="49"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,7 +67,7 @@
                                 <outletCollection property="gestureRecognizers" destination="GRA-R2-e0M" appends="YES" id="EJx-NK-kiV"/>
                             </connections>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jL-RL-3qL" customClass="KWLCoolView">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8jL-RL-3qL" customClass="KWLCoolViewCell">
                             <rect key="frame" x="48" y="134" width="257" height="49"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,6 +81,9 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="textField" destination="UBy-LT-g7i" id="LbN-xl-jhr"/>
+                    </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -3,6 +3,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface KWLCoolView : UIView\
+@interface KWLAccessoryView : UIView <UITextFieldDelegate>
 
 @end
